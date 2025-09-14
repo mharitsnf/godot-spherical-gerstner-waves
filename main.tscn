@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dbb8mhx4hydpx"]
+
+[ext_resource type="Material" uid="uid://dpdwoo70lmcvj" path="res://m_ocean.tres" id="1_0xm2m"]
+[ext_resource type="Environment" uid="uid://bew6xbjhowr3x" path="res://unshaded_env.tres" id="1_h2yge"]
+[ext_resource type="Script" uid="uid://b44d4xpr87g8f" path="res://gerstner_wave_generator.gd" id="2_h2yge"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_1bvp3"]
+material = ExtResource("1_0xm2m")
+subdivide_width = 128
+subdivide_depth = 128
+
+[node name="Main" type="Node"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource("1_h2yge")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+rotation_edit_mode = 2
+extra_cull_margin = 16384.0
+mesh = SubResource("PlaneMesh_1bvp3")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.949299, 0.314374, 0, -0.314374, 0.949299, 0, 0, 0)
+light_color = Color(1, 0.95, 0.75, 1)
+light_volumetric_fog_energy = 0.5
+shadow_enabled = true
+
+[node name="GersnterWaveGenerator" type="Node" parent="."]
+script = ExtResource("2_h2yge")
+num_of_waves = 20
+filename = "gerstner_20"
+metadata/_custom_type_script = "uid://b44d4xpr87g8f"
