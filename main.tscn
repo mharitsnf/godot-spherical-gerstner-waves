@@ -27,6 +27,5 @@ shadow_enabled = true
 
 [node name="GersnterWaveGenerator" type="Node" parent="."]
 script = ExtResource("2_h2yge")
-num_of_waves = 20
-filename = "gerstner_20"
+filename = "gerstner_30"
 metadata/_custom_type_script = "uid://b44d4xpr87g8f"

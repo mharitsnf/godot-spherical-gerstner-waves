@@ -1,23 +1,23 @@
 [gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dpdwoo70lmcvj"]
 
 [ext_resource type="Shader" uid="uid://shn7ijmgerxc" path="res://ocean.gdshader" id="1_c6wb5"]
-[ext_resource type="Texture2D" uid="uid://c27wxex87cfvb" path="res://gerstner_20.png" id="2_eve1p"]
+[ext_resource type="Texture2D" uid="uid://dmfevcdxrglhg" path="res://gerstner_waves/gerstner_30.png" id="2_c6wb5"]
 
 [resource]
 render_priority = 0
 shader = ExtResource("1_c6wb5")
-shader_parameter/y_offset = 0.059
-shader_parameter/y_exponent = 4.0
-shader_parameter/radius = 100.0
+shader_parameter/y_offset = 1.245
+shader_parameter/y_exponent = 2.0
+shader_parameter/radius = 200.0
 shader_parameter/basis = Basis(1, 0, 0, 0, 1, 0, 0, 0, 1)
 shader_parameter/wave_normal_amount = 1.0
-shader_parameter/amplitude_scale = 0.435
-shader_parameter/frequency_scale = 0.36
+shader_parameter/amplitude_scale = 0.64
+shader_parameter/frequency_scale = 0.27
 shader_parameter/time_scale = 1.0
-shader_parameter/steepness_e0 = 0.0
+shader_parameter/steepness_e0 = 0.5
 shader_parameter/steepness_e1 = 1.0
-shader_parameter/cpu_time = 100.0
-shader_parameter/wave_tex = ExtResource("2_eve1p")
+shader_parameter/cpu_time = 0.0
+shader_parameter/wave_tex = ExtResource("2_c6wb5")
 shader_parameter/uv_offset = Vector3(0, 0, 0)
 shader_parameter/main_color = Color(0.45, 0.675, 0.9, 1)
 shader_parameter/back_light = Color(1, 1, 1, 1)

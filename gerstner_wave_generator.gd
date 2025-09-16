@@ -16,5 +16,5 @@ func _generate_wave_texture() -> void:
 		img.set_pixel(0, i, data)
 		img.set_pixel(1, i, direction)
 
-	img.save_png("res://%s.png" % filename)
-	print("Gerstner data texture generated! (res://%s.png)" % filename)
+	img.save_png("res://gerstner_waves/%s.png" % filename)
+	print("Gerstner data texture generated! (res://gerstner_waves/%s.png)" % filename)
